@@ -100,7 +100,40 @@ opacity: 0;
 
 .ex-10-icon {
     font-size: 60px;
+    animation-name: loading;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes loading{
+
+    0%{
+        rotate: calc(0deg);
+        color: black;
+    }
+
+    25%{
+        rotate: calc(90deg);
+        color: red;
+    }
+
+    50%{
+        rotate: calc(180deg);
+        color: green;
+    }
+
+    75%{
+        rotate: calc(270deg);
+        color:yellow;
+    }
+
+    100%{
+        rotate: calc(360deg);
+        color: blue;
+    }
+}
+
+
 .ex-11-icon {
     font-size: 60px;
 }
