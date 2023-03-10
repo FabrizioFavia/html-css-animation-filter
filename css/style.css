@@ -82,12 +82,13 @@ opacity: 0;
 .ex-8-img:hover {
     border-radius: 20px;
     filter: invert(1);
+    transform: translate(42px, 18px);
 }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
-    transition: 1.5s;
+    transition: 2s;
 }
 
 
@@ -96,13 +97,18 @@ opacity: 0;
     filter: sepia(4);
     transform: scale(0.3);
     rotate: calc(360deg);
+    border-radius: 20px;
 }
 
 .ex-10-icon {
     font-size: 60px;
     animation-name: loading;
-    animation-duration: 0.5s;
     animation-iteration-count: infinite;
+    animation-duration: 3s; 
+}
+
+.ex-10-icon{
+    animation-name: loading;
 }
 
 @keyframes loading{
@@ -114,29 +120,59 @@ opacity: 0;
 
     25%{
         rotate: calc(90deg);
-        color: red;
+        color: rgb(61, 23, 23);
     }
 
     50%{
         rotate: calc(180deg);
-        color: green;
+        color: rgb(123, 56, 41);
     }
 
     75%{
         rotate: calc(270deg);
-        color:yellow;
+        color:rgb(224, 93, 93);
     }
 
     100%{
         rotate: calc(360deg);
-        color: blue;
+        color: rgb(253, 22, 22);
     }
 }
 
 
 .ex-11-icon {
-    font-size: 60px;
+    font-size: 60px;  
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
+
+.ex-11-icon:hover{
+    animation-name: loading1;
+}
+
+@keyframes loading1{
+
+    0%{ 
+        left: 0
+    }
+
+    25%{
+        rotate: calc(90deg);
+    }
+
+    50%{
+        rotate: calc(180deg);
+    }
+
+    75%{
+        rotate: calc(270deg);
+    }
+
+    100%{
+        rotate: calc(0deg);
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -150,14 +186,77 @@ opacity: 0;
     text-align: center;
     text-decoration: none;
 }
+
+.ex-12-top-white{
+    animation-name: moves;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+
+}
+
+@keyframes moves{
+    0%{
+        left: 10%;
+    }
+
+    25%{
+        left: 35%;
+    }
+
+    50%{
+        left: 60%;
+    }
+
+    75%{
+        left: 35%;
+    }
+
+    100%{
+        left: 10%;
+    }
+}
+
+.ex-12-bottom-white{
+    animation-name: moves1;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+
+}
+
+@keyframes moves1{
+    0%{
+        right: 20%;
+    }
+
+    25%{
+        right: 45%;
+    }
+
+    50%{
+        right: 60%;
+    }
+
+    75%{
+        right: 45%;
+    }
+
+    100%{
+        right: 20%;
+    }
+}
+
+
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
     left: 10%;
-    background: #f5f5f5;
+    background: #F5F5F5;
     width: 60px;
     height: 20px;
 }
+
+
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
@@ -165,4 +264,90 @@ opacity: 0;
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+.ex-12-bottom-white{
+    animation-name: moves1;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+
+}
+
+
+.ex-13-top-white{
+    animation-name: moves3;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes moves3{
+    0%{
+        top: -10px;
+        left: 10%;
+    }
+
+    20%{
+        top: -10px;
+        left: 75%;
+    }
+
+    40%{
+        top: 50px;
+        left: 75%;
+    }
+
+    60%{
+        top: 50px;
+        left: -10%;
+    }
+
+    80%{
+        top: -10px;
+        left: -10%;
+    }
+
+    100%{
+        top: -10px;
+        left: 10%;
+    }
+}
+
+
+.ex-13-bottom-white{
+    animation-name: moves2;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+
+}
+
+@keyframes moves2{
+    0%{
+        right: 20%;
+    }
+
+    20%{
+        right: 75%;
+        bottom: -10px;
+    }
+
+    40%{
+        right: 75%;
+        bottom:50px
+    }
+
+    60%{
+        right: -10%;
+         bottom: 50px;
+        
+    }
+
+    80%{
+        right: -10%;
+        bottom: -10px;
+    }
+
+    100%{
+        right: 20%;
+        bottom: -10px;
+    }
 }
